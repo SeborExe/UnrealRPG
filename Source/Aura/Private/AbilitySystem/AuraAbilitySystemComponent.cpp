@@ -12,7 +12,7 @@ void UAuraAbilitySystemComponent::EffectApplied(UAbilitySystemComponent* Ability
                                                 const FGameplayEffectSpec& EffectSpec, FActiveGameplayEffectHandle ActiveEffectHandle)
 {
 	FGameplayTagContainer TagContainer;
-	EffectSpec.GetAllAssetTags(TagContainer);
+	EffectSpec.GetAllGrantedTags(TagContainer);
 
 	EffectAssetTags.Broadcast(TagContainer);
 }
